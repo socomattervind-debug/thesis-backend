@@ -14,4 +14,4 @@ router.get("/coordinates", async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
