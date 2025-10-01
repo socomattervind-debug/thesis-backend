@@ -43,4 +43,4 @@ const FireIncidentSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("FireIncident", FireIncidentSchema);
+module.exports = mongoose.model("FireIncident", FireIncidentSchema);
