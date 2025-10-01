@@ -1,5 +1,5 @@
 // routes/fireFighterRoutes.js
-import express from "express";
+const express = require("express");
 import Coordinate from "../models/Coordinate.js";
 
 const router = express.Router();

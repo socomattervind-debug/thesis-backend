@@ -1,5 +1,5 @@
 // models/Coordinate.js
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const coordinateSchema = new mongoose.Schema({
   origin: {
