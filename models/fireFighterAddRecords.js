@@ -1,5 +1,5 @@
 // models/FireIncident.js
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const FireIncidentSchema = new mongoose.Schema({
   city: {
