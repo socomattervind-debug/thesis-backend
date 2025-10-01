@@ -5,7 +5,7 @@ const Coordinate = require("../models/fireFighterRoutes");
 const router = express.Router();
 
 // GET coordinates
-router.get("/coordinates", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const coords = await Coordinate.findOne();
     res.json(coords);
