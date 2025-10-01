@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const FireIncident = require("../models/FireIncident");
+const FireIncident = require("../models/fireFighterAddRecords");
 
 // Add new fire incident record
 router.post("/", async (req, res) => {
