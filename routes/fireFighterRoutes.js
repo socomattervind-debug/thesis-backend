@@ -1,6 +1,6 @@
 // routes/fireFighterRoutes.js
 const express = require("express");
-const Coordinate = require("../models/Coordinate");
+const Coordinate = require("../models/fireFighterRoutes");
 
 const router = express.Router();
 
