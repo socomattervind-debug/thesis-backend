@@ -1,4 +1,3 @@
-// models/FireIncident.js
 const mongoose = require("mongoose");
 
 const FireIncidentSchema = new mongoose.Schema({
@@ -18,16 +17,16 @@ const FireIncidentSchema = new mongoose.Schema({
     trim: true,
   },
   date: {
-    type: String, // e.g. "October, 7, 2025" or "2025-10-07"
+    type: String,
     required: true,
   },
   timeArrival: {
-    type: String, // 12-hour format with AM/PM
+    type: String,
     required: true,
     match: /^(0?[1-9]|1[0-2]):[0-5][0-9]\s?(AM|PM)$/i,
   },
   timeFinished: {
-    type: String, // 12-hour format with AM/PM
+    type: String,
     required: true,
     match: /^(0?[1-9]|1[0-2]):[0-5][0-9]\s?(AM|PM)$/i,
   },
