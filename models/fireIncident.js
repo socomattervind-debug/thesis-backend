@@ -7,25 +7,29 @@ const FireIncidentSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  barangay: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   address: {
     type: String,
     required: true,
     trim: true,
   },
   date: {
-    type: String, // naka "YYYY-MM-DD" format
+    type: String, // e.g. "October, 7, 2025" or "2025-10-07"
     required: true,
-    match: /^\d{4}-\d{2}-\d{2}$/,
   },
   timeArrival: {
-    type: String, // naka "HH:MM" 24-hour format
+    type: String, // 12-hour format with AM/PM
     required: true,
-    match: /^([01]\d|2[0-3]):([0-5]\d)$/,
+    match: /^(0?[1-9]|1[0-2]):[0-5][0-9]\s?(AM|PM)$/i,
   },
   timeFinished: {
-    type: String, // naka "HH:MM" 24-hour format
+    type: String, // 12-hour format with AM/PM
     required: true,
-    match: /^([01]\d|2[0-3]):([0-5]\d)$/,
+    match: /^(0?[1-9]|1[0-2]):[0-5][0-9]\s?(AM|PM)$/i,
   },
   cause: {
     type: String,
@@ -35,7 +39,7 @@ const FireIncidentSchema = new mongoose.Schema({
   severity: {
     type: String,
     required: true,
-    enum: ["Minor", "Moderate", "Severe", "Critical"], // optional restriction
+    enum: ["Minor", "Moderate", "Severe", "Critical"],
   },
   createdAt: {
     type: Date,
