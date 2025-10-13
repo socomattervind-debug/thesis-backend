@@ -15,6 +15,7 @@ const fireFighter = require("./routes/fireFighter");
 const fireFighterRoutes = require("./routes/fireFighterRoutes");
 const fireFighterLogin = require("./routes/fireFighterLogin");
 const fireFighterAddRecords = require("./routes/fireFighterAddRecords");
+const hydrantCoordinates = require("./routes/fireFighterHydrant");
 
 require("dotenv").config();
 
@@ -34,6 +35,7 @@ app.use("/fireFighter", fireFighter);
 app.use("/fireFighterRoutes", fireFighterRoutes);
 app.use("/fireFighterLogin", fireFighterLogin);
 app.use("/fireFighterAddRecords", fireFighterAddRecords);
+app.use("/fireFighterHydrant", hydrantCoordinates);
 
 // Connect to MongoDB
 connectDB()
