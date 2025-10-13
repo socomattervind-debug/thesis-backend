@@ -1,7 +1,7 @@
 // models/Coordinate.js
 const mongoose = require("mongoose");
 
-const HydrantCoordinates = new mongoose.Schema({
+const hydrantSchema = new mongoose.Schema({
   origin: {
     latitude: Number,
     longitude: Number,
@@ -14,4 +14,4 @@ const HydrantCoordinates = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("HydrantCoordinates", HydrantCoordinates);
+module.exports = mongoose.model("hydrant", hydrantSchema);
